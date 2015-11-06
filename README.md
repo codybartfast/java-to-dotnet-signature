@@ -3,9 +3,9 @@
 A basic sample of creating a cryptographic signature on Java and verifying 
 it on .Net
 
-  - CreateKeysJ: Use Java to create keys in Java and .Net formats.
-  - SignMessageJ: Use Jave to create a signature using the private key.
-  - VerifyMessageN: Use .Net to verifiy the message's signature.
+  - CreateKeysJ: Use Java to create keys in Java and .Net formats. _[code](/CreateKeysJ/src/Main.java)_
+  - SignMessageJ: Use Jave to create a signature using the private key. _[code](/SignMessageJ/src/Main.java)_
+  - VerifyMessageN: Use .Net to verifiy the message's signature. _[code](/VerifyMessageN/Program.cs)_
 
 
 ## WARNING

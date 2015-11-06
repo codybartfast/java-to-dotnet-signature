@@ -65,3 +65,7 @@ $RECYCLE.BIN/
 
 *.iml
 .idea/
+
+*Key.txt
+Message.txt
+Signature.txt

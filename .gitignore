@@ -57,3 +57,11 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+=========================
+# Above is GitHub default
+=========================
+
+*.iml
+.idea/

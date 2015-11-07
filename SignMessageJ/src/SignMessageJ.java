@@ -21,7 +21,7 @@ import java.util.Base64;
 import java.util.Date;
 
 
-public class Main {
+public class SignMessageJ {
 
     static final String KEY_ALGORITHM = "RSA";
     static final String SIGNATURE_ALGORITHM = "SHA512withRSA";

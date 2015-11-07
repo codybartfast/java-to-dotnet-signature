@@ -3,6 +3,7 @@
 // Creates private and public keys and saves them to files in the current
 // directory in Java and .Net formats
 
+import java.io.Console;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.math.BigInteger;
@@ -12,7 +13,7 @@ import java.security.spec.RSAPublicKeySpec;
 import java.util.Arrays;
 import java.util.Base64;
 
-public class Main {
+public class CreateKeysJ {
 
     static final String KEY_ALGORITHM = "RSA";
     static final int KEY_LENGTH = 1024;
@@ -23,7 +24,7 @@ public class Main {
     static final String XML_PUBLIC_FILENAME = "XmlPublicKey.txt";
 
     static final String NL = System.getProperty("line.separator");
-    
+
     public static void main(String[] args) throws Exception {
 
         print("About to create KeyPair.");

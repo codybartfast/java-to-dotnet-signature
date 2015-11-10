@@ -1,3 +1,13 @@
+:: Runs the three bits of code in this project.
+::  - writes key pairs in 'java' and '.net' formats using Java.
+::  - writes a message and then writes its signature using private key in Java.
+::  - reads the message, signature and public key and verifies it in .Net.
+
+:: Runs in a 'working' directory that is the sibling of the directory from
+:: which this batch file is run.
+
+:: Assumes java is on the path.
+
 @echo off
 echo Hello
 set binDir="%~dp0"

@@ -41,7 +41,7 @@ public class SignMessageJ {
         }
 
         print("Reading content of PRIVATE key file.");
-        String keyText = readPrivateKey(fullPath);
+        String keyText = readAllTextFromFile(fullPath);
         print("Got key text:" + NL + keyText);
 
         print("Getting key from encoded text");
@@ -91,9 +91,10 @@ public class SignMessageJ {
         return message;
     }
 
-    static String readPrivateKey(String filePath) throws Exception {
+    static String readAllTextFromFile(String filePath) throws Exception{
         Path path = Paths.get(filePath);
-        return Files.readAllLines(path).get(0);
+        String text = new String(Files.readAllBytes(path));
+        return text;
     }
 
     static void writeFile(String text, String filename)throws Exception{

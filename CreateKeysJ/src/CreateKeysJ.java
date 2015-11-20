@@ -74,7 +74,7 @@ public class CreateKeysJ {
         return getBase64(publicKeyEncoded);
     }
 
-    static String getPrivateKeyAsXml(PrivateKey privateKey)throws Exception{
+    static String getPrivateKeyAsXml(PrivateKey privateKey) throws Exception{
         KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);
         RSAPrivateCrtKeySpec spec = keyFactory.getKeySpec(privateKey, RSAPrivateCrtKeySpec.class);
         StringBuilder sb = new StringBuilder();
@@ -93,7 +93,7 @@ public class CreateKeysJ {
         return sb.toString();
     }
 
-    static String getPublicKeyAsXml(PublicKey publicKey)throws Exception{
+    static String getPublicKeyAsXml(PublicKey publicKey) throws Exception{
         KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);
         RSAPublicKeySpec spec = keyFactory.getKeySpec(publicKey, RSAPublicKeySpec.class);
         StringBuilder sb = new StringBuilder();
@@ -121,8 +121,8 @@ public class CreateKeysJ {
         // signed, the byte representation contains an 'extra' byte that
         // contains the bit which indicates the sign.
         //
-        // In any case, it is creates arrays of 129 bytes rather than the
-        // expected 128 bytes.  So if it the array's length is odd and the
+        // In any case, it creates arrays of 129 bytes rather than the
+        // expected 128 bytes.  So if the array's length is odd and the
         // leading byte is zero then trim the leading byte.
         if(length % 2 != 0 && bytes[0] == 0) {
             bytes = Arrays.copyOfRange(bytes, 1, length);
@@ -135,7 +135,7 @@ public class CreateKeysJ {
         return Base64.getEncoder().encodeToString(bytes);
     }
 
-    static void writeFile(String text, String filename)throws Exception{
+    static void writeFile(String text, String filename) throws Exception{
         try(PrintWriter writer = new PrintWriter(filename)){
             writer.write(text);
         }
